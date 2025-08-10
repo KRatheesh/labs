@@ -7,6 +7,7 @@ from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
 # from langchain_community.llms import GPT4All
+# from langchain_ollama import OllamaLLM
 
 load_dotenv()
 
@@ -22,6 +23,8 @@ llm = ChatGoogleGenerativeAI(
 # llm = GPT4All(
 #     model="C:/Users/kanna/AppData/Local/nomic.ai/GPT4All/qwen2.5-coder-7b-instruct-q4_0.gguf"
 # )
+
+# llm = OllamaLLM(model="mistral")
 
 prompt = PromptTemplate(
     input_variables=["topic"],

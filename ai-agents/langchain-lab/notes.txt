@@ -1,0 +1,24 @@
+Ollama
+To run models using Ollama. Install and then srve the model using command like
+ollama run mistral
+then it can be consumed via python libraries for Ollama
+
+
+GPT4all
+install packages and just point to downloaded model folder
+
+TODO
+#1: learn more about langchain and langgraph
+#2: update code to fix below warning
+$$$$$$$$$$$$$$
+c:\labs\ai-agents\langchain-lab\src\langsample.py:27: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 1.0. Use :meth:`~RunnableSequence, e.g., `prompt | llm`` instead.
+  chain = LLMChain(llm=llm, prompt=prompt)
+c:\labs\ai-agents\langchain-lab\src\langsample.py:30: LangChainDeprecationWarning: Please see the migration guide at: https://python.langchain.com/docs/versions/migrating_memory/
+  memory = ConversationBufferMemory()
+c:\labs\ai-agents\langchain-lab\src\langsample.py:31: LangChainDeprecationWarning: The class `ConversationChain` was deprecated in LangChain 0.2.7 and will be removed in 1.0. Use :class:`~langchain_core.runnables.history.RunnableWithMessageHistory` instead.
+  conversation = ConversationChain(
+c:\labs\ai-agents\langchain-lab\src\langsample.py:52: LangChainDeprecationWarning: LangChain agents will continue to be supported, but it is recommended for new use cases to be built with LangGraph. LangGraph offers a more flexible and full-featured framework for building agents, including support for tool-calling, persistence of state, and human-in-the-loop workflows. For details, refer to the `LangGraph documentation <https://langchain-ai.github.io/langgraph/>`_ as well as guides for `Migrating from AgentExecutor <https://python.langchain.com/docs/how_to/migrate_agent/>`_ and LangGraph's `Pre-built ReAct agent <https://langchain-ai.github.io/langgraph/how-tos/create-react-agent/>`_.
+  agent = initialize_agent(
+c:\labs\ai-agents\langchain-lab\src\langsample.py:62: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = agent.run("Analyze the impact of artificial intelligence on healthcare and summarize our discussion.")
+$$$$$$$$$$$$$$$$$
