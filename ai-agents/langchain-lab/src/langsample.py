@@ -1,11 +1,12 @@
 import os
+from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import AgentType, Tool, initialize_agent
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
-from dotenv import load_dotenv
+# from langchain_community.llms import GPT4All
 
 load_dotenv()
 
@@ -18,6 +19,9 @@ llm = ChatGoogleGenerativeAI(
     google_api_key=api_key,
     temperature=0.7
 )
+# llm = GPT4All(
+#     model="C:/Users/kanna/AppData/Local/nomic.ai/GPT4All/qwen2.5-coder-7b-instruct-q4_0.gguf"
+# )
 
 prompt = PromptTemplate(
     input_variables=["topic"],
